@@ -38,6 +38,8 @@ The Staking Contract allows users to deposit BNRY tokens into a pool managed by 
 
 2. **withdraw(uint256 amount):**
    - Allows users to withdraw a specified a# Security Audit Scope - Staking Contract
+   - Ensures that the withdrawal amount does not exceed the user’s balance.
+   - Emits a `WithdrewStake` event.
 
 ## Audit Overview
 The purpose of this audit is to assess the security, functionality, and efficiency of the `StakingContract`. This document outlines the scope of the audit and the goals to be achieved.
@@ -73,8 +75,7 @@ The purpose of this audit is to assess the security, functionality, and efficien
 ## Conclusion
 The audit will aim to thoroughly test and review the `StakingContract` to ensure it meets the highest standards of security and efficiency. The findings will be documented in a comprehensive audit report.
 mount of their staked tokens.
-   - Ensures that the withdrawal amount does not exceed the user’s balance.
-   - Emits a `WithdrewStake` event.
+  
 
 ## Error Handling
 - The contract reverts transactions with meaningful error messages to prevent unexpected behavior and enhance security.
